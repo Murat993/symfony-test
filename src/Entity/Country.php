@@ -66,7 +66,7 @@ class Country
         return $this;
     }
 
-    public function getTax(): ?string
+    public function getTax(): ?int
     {
         return $this->tax;
     }
