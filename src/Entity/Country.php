@@ -34,7 +34,7 @@ class Country
     /**
      * @ORM\Column(type="integer")
      */
-    private $tax;
+    private int $tax;
 
 
     public function getId(): string

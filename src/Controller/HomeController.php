@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
-use App\Model\Product\Create\Command;
-use App\Model\Product\Create\Form;
-use App\Model\Product\Create\Handler;
+use App\Model\Basket\Create\Command;
+use App\Model\Basket\Create\Form;
+use App\Model\Basket\Create\Handler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,7 +31,7 @@ class HomeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             try {
                 $handler->handle($command);
-                $this->addFlash('success', 'Product created.');
+                $this->addFlash('success', 'Basket created.');
                 return $this->redirectToRoute('home');
             } catch (\DomainException $e) {
                 $this->addFlash('error', $e->getMessage());

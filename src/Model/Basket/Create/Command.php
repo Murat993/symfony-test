@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Model\Product\Create;
+namespace App\Model\Basket\Create;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
